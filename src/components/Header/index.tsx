@@ -10,7 +10,6 @@ import { Container } from "./styles";
 const Header = () => {
   const history = useHistory();
   const { signOut } = useAuth();
-
   const handleSignout = useCallback(() => {
     signOut();
     toast.success("Volte sempre!");
@@ -23,6 +22,11 @@ const Header = () => {
         <FaHome onClick={() => history.push("/")} />
         <Link href={`/user`}>Usuário</Link>
         <Link href={`/tentativa`}>Tentativa</Link>
+        <Link href={`/areaconhecimento`}>Area de Conhecimento</Link>
+        <Link href={`/questao`}>Questões</Link>
+        <Link href={`/alternativa`}>Alternativa</Link>
+        <Link href={`/resposta`}>Resposta</Link>
+        <Link href={`/resolucao`}>Resolução</Link>
         <div>
           <IoIosLogOut onClick={handleSignout} />
         </div>
